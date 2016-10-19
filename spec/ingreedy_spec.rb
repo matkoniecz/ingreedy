@@ -402,6 +402,102 @@ describe Ingreedy, "ingredient formatting" do
   end
 end
 
+describe Ingreedy, "unit parsing with :pl locale" do
+  context "Polish locale" do
+    before(:all) do
+      Ingreedy.locale = :pl
+    end
+
+    after(:all) do
+      Ingreedy.locale = nil
+    end
+    {
+      "1 szklanka mąki" => :cup,
+      "2 łyżki mąki" => :spoon,
+      "1 łyżka mąki" => :spoon,
+      "1 płaska łyżka mąki" => :spoon,
+    }.each do |query, expected|
+      it "parses the #{expected} unit correctly" do
+        expect(Ingreedy.parse(query)).to parse_the_unit(expected)
+      end
+    end
+  end
+end
+
+describe Ingreedy, "without units" do
+  context "Polish locale" do
+    before(:all) do
+      Ingreedy.locale = :pl
+    end
+
+    after(:all) do
+      Ingreedy.locale = nil
+    end
+    it "parses correctly units that is prefix of other unit" do
+      result = Ingreedy.parse "3 płaskie łyżki majonezu"
+
+      expect(result.amount).to eq(3)
+      expect(result.unit).to eq :spoon
+      expect(result.ingredient).to eq("majonezu")
+    end
+  end
+end
+
+describe Ingreedy, "amount parsing with :pl locale" do
+  context "Polish locale" do
+    before(:all) do
+      Ingreedy.locale = :pl
+    end
+
+    after(:all) do
+      Ingreedy.locale = nil
+    end
+    {
+      "2x ziemniak" => 2,
+      "ziemniak 2x" => 2,
+      "1 szklanka mąki" => 1,
+      "jedna szklanka mąki" => 1,
+      "półtora szklanki mąki" => 1.5,
+      "1.5 szklanki mąki" => 1.5,
+      "1 1/2 szklanki mąki" => "3/2",
+      "¼ szklanki mąki" => "1/4",
+      "1 ½ szklanki mąki" => "3/2",
+      "1½ szklanki mąki" => "3/2",
+      "1.0 szklanka mąki" => 1,
+      "1,5 szklanki mąki" => "3/2",
+      "1 2/3 szklanki mąki" => "5/3",
+      "1 (400g) puszka zmiksowanych pomidorów" => 1,
+      "2 (400g) puszki zmiksowanych pomidorów" => 2,
+      "3 400 gramowe puszki zmiksowanych pomidorów" => 3,
+      "jedna 400 gramowa puszka zmiksowanych pomidorów" => 1,
+      "dwie czterysta gramowe puszki zmiksowanych pomidorów" => 2,
+      "dwie 400 gramowe puszki zmiksowanych pomidorów" => 2,
+      "trzy 400 gramowe puszki zmiksowanych pomidorów" => 3,
+      "1/2 szklanki mąki" => "1/2",
+      ".25 szklanki mąki" => "1/4",
+      "12l tequili" => 12,
+      "1 banan" => 1,
+      "marchewka 3x" => 3,
+      "x3 marchewka" => 3,
+      "marchewka x3" => 3,
+      "marchewki trzy" => 3,
+    }.each do |query, expected|
+      it "parses the correct amount as a rational" do
+      	parsed = nil
+      	begin
+	      	parsed = Ingreedy.parse(query)
+	      rescue => e
+          puts "failed on #{query} with #{e.class}"
+	      	#puts e
+	      	#puts e.class
+	      	#necessary as raising e crashes rspec - for further investigation try to run parsing test on something like "banana"
+	      end
+        expect(parsed).to parse_the_amount(expected.to_r)
+      end
+    end
+  end
+end
+
 describe Ingreedy, "error handling" do
   it "wraps Parslet exceptions in a custom exception" do
     expect do

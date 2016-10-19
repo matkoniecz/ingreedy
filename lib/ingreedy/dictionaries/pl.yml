@@ -1,0 +1,221 @@
+:units:
+  :cup:
+    - "szklanka"
+    - "szklanek"
+    - "szklanki"
+    - "szkl"
+    - "szkl."
+  :spoon:
+    - "płaska łyżka"
+    - "płaskich łyżek"
+    - "płaskie łyżki"
+    - "płaskiej łyżki"
+    - "łyżka"
+    - "łyżek"
+    - "łyżki"
+  :teaspoon:
+    - "płaska łyżeczka"
+    - "płaskich łyżeczek"
+    - "płaskie łyżeczki"
+    - "płaskiej łyżeczki"
+    - "łyżeczka"
+    - "łyżeczek"
+    - "łyżeczki"
+  :rounded_tablespoon:
+    - "czubata łyżka"
+    - "czubatych łyżek"
+    - "czubate łyżki"
+    - "czubatej łyżki"
+  :rounded_teaspoon:
+    - "czubata łyżeczka"
+    - "czubatych łyżeczek"
+    - "czubate łyżeczki"
+    - "czubatej łyżeczki"
+  :heaped_tablespoon:
+    - "kopiasta łyżka"
+    - "kopiastych łyżek"
+    - "kopiaste łyżki"
+    - "kopiastej łyżki"
+  :heaped_teaspoon:
+    - "kopiasta łyżeczka"
+    - "kopiastych łyżeczek"
+    - "kopiaste łyżeczki"
+    - "kopiastej łyżeczki"
+  :gram:
+    - "g"
+    - "g."
+    - "gr"
+    - "gr."
+    - "gram"
+    - "gramy"
+    - "grama"
+  :dekagram:
+    - "dag"
+    - "dag."
+    - "deko"
+    - "dekagram"
+    - "dkg"
+    - "dkg."
+  :kilogram:
+    - "kg"
+    - "kg."
+    - "kilo"
+    - "kilogram"
+    - "kilograma"
+    - "kilogramy"
+    - "kilogramu"
+    - "kilogramów"
+  :liter:
+    - "l"
+    - "l."
+    - "litr"
+    - "litry"
+    - "litra"
+  :milligram:
+    - "mg"
+    - "mg."
+    - "milligram"
+    - "milligrama"
+    - "milligramy"
+    - "milligramu"
+    - "milligramów"
+    - "milligramow"
+  :milliliter:
+    - "ml"
+    - "ml."
+    - "mililitr"
+    - "mililitra"
+    - "mililitry"
+    - "mililitru"
+    - "mililitrów"
+    - "mililitrow"
+  :pinch:
+    - "szczypta"
+    - "szczypty"
+    - "szczypt"
+  :handful:
+    - "garść"
+    - "garści"
+  :clove:
+    - "ząbek"
+    - "ząbka"
+    - "ząbku"
+    - "ząbki"
+    - "ząbków"
+  :cube:
+    - "kostki"
+    - "kostek"
+    - "kostka"
+  :to_taste:
+    - "do smaku"
+  :for_decoration:
+    - "do ozdobienia"
+  :part:
+    - "kawałek"
+    - "fragment"
+    - "fragmencik"
+    - "troszke"
+    - "troszkę"
+  :piece:
+    - "sztuka"
+    - "sztuk"
+    - "sztuki"
+    - "szt"
+    - "szt."
+    - "x"
+    - "butelki"
+    - "butelek"
+    - "butelka"
+    - "opakowań"
+    - "opakowanie"
+    - "opakowania"
+    - "puszka"
+    - "puszki"
+    - "puszek"
+    - "paczka"
+    - "paczke"
+    - "paczki"
+  :small_bundle:
+    - "pęczek"
+    - "pęczki"
+    - "pęczków"
+    - "pęczka"
+  :seed:
+    - "ziarno"
+    - "ziarna"
+    - "ziaren"
+    - "ziarenko"
+    - "ziarenka"
+    - "ziarenek"
+  :portion:
+    - "porcja"
+    - "porcje"
+    - "porcji"
+  :stem:
+    - "łodyga"
+    - "łodyg"
+    - "łodygi"
+  :metre:
+    - "m"
+    - "metr"
+    - "metra"
+    - "metry"
+    - "metrów"
+  :centimetre:
+    - "cm"
+    - "centymetr"
+    - "centymetra"
+    - "centymetry"
+    - "centymetrów"
+  :slice:
+    - "kromka"
+    - "kromek"
+    - "kromki"
+  :tea_bag:
+    - "szczur"
+    - "szczury"
+    - "szczura"
+:numbers:
+  cwiartka: 0.25
+  ćwiartka: 0.25
+
+  pół: 0.5
+  połowa: 0.5
+
+  jedna: 1
+  jeden: 1
+  jedno: 1
+
+  półtora: 1.5
+
+  dwie: 2
+  dwa: 2
+  dwoje: 2
+
+  trzy: 3
+  troje: 3
+
+  cztery: 4
+  czworo: 4
+
+  kilka: 5
+  pięć: 5
+  piątka: 5
+
+  sześć: 6
+  sześcioro: 6
+  szóstka: 6
+
+  siedem: 7
+  siedmiu: 7
+
+  osiem: 8
+  ośmiu: 8
+
+  dziewięć: 9
+  dziewięciu: 9
+
+  dziesięć: 10
+  dziesięciu: 10
+
+:prepositions:
