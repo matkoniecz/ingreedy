@@ -491,6 +491,7 @@ describe Ingreedy, "amount parsing with :pl locale" do
 	      	#puts e
 	      	#puts e.class
 	      	#necessary as raising e crashes rspec - for further investigation try to run parsing test on something like "banana"
+	      	# report on https://github.com/rspec/rspec-core/issues?page=2&q=is%3Aissue+is%3Aopen
 	      end
         expect(parsed).to parse_the_amount(expected.to_r)
       end
